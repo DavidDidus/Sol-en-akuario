@@ -9,7 +9,7 @@ import About from './components/About.tsx';
 const App: React.FC = () => {
     return (
         <div>
-            <Header />
+            <Header/>
             <Routes>
                 <Route path="/" element={<HeroSection />} />
                 <Route path="/productos" element={<ProductList />} />

@@ -8,6 +8,7 @@ import tortaDojaImage from '../images/torta doja.jpg';
 import tortaFubolImage from '../images/torta fubol.jpg';
 import tortaGalletaImage from '../images/torta galleta.jpg';
 import tortaLindaImage from '../images/torta linda.jpg';
+import TopProduct from "./TopProduct.tsx";
 
 
 
@@ -100,12 +101,16 @@ const images = [
           cursor: "pointer",
           boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
           marginTop: "2rem",
-          marginBottom: "4rem",
+      
         }}
+        onClick={() => window.location.href = '/productos'}
       >
         Explorar Productos
       </motion.button>
+
+      <TopProduct />
     </section>
+    
   );
 };
 

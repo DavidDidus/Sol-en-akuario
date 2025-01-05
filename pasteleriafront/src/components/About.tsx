@@ -32,9 +32,19 @@ const About: React.FC = () => {
             ¡Ven a visitarnos!
             </p>
         </div>
+        
+        <img 
+            src={Moxito} 
+            alt="Moxito" 
+            style={{ 
+                    width: '250px', 
+                    display: 'block', 
+                    margin: '0 auto' 
+                }} 
+        />
+        <p style={{ color: "#333" }}>{"Dueño y Creador"}</p>
         </motion.div>
-        <img src={Moxito} alt="Moxito" style={{ width: '150px', display: 'block', margin: '0 auto' }} />
-        </section>
+        </section>  
     );
 };
 

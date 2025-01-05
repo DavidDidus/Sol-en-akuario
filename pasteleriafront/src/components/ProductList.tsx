@@ -1,29 +1,73 @@
 import React from 'react';
-
-interface Product {
-    id: number;
-    name: string;
-    price: number;
-}
-
-const products: Product[] = [
-    { id: 1, name: 'Torta de Chocolate', price: 15000 },
-    { id: 2, name: 'Cheesecake de Frutilla', price: 12000 },
-    { id: 3, name: 'Brownies', price: 8000 },
-];
+import minicake from '../images/torta linda.jpg';
+import { motion } from "framer-motion";
+import '../styles/ProductListStyles.css';
+import MinicakeGallery from './MinicakeGallery.tsx';
 
 const ProductList: React.FC = () => {
     return (
-        <div>
-            <h2>Productos:</h2>
-            <ul>
-                {products.map((product) => (
-                    <li key={product.id}>
-                        {product.name} - ${product.price}
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <section
+            style={{
+            background: "#f5d6eb",
+            color: "#333",
+            
+            }}>
+        <div className="product-list-container">
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="motion-container"
+        >
+          <div className="content-container">
+            <h2 className="title">Minicakes</h2>
+  
+            <div className="flex-row">
+              {/* Sabores */}
+              <div className="flex-item sabores">
+                <h3 className="subtitle">Sabores Bizcocho</h3>
+                <ul className="list">
+                  <li>Vainilla</li>
+                  <li>Chocolate</li>
+                  <li>Canela tiramisu</li>
+                  <li>Limón - naranja</li>
+                  <li>Arándanos</li>
+                  <li>Zanahoria</li>
+                </ul>
+              </div>
+  
+              {/* Imagen y título */}
+              <div className="flex-item image-container">
+                <img 
+                  src={minicake} 
+                  alt="Minicake" 
+                  className="image"
+                />
+              </div>
+  
+              {/* Rellenos */}
+              <div className="flex-item rellenos">
+                <h3 className="subtitle">Rellenos</h3>
+                <ul className="list">
+                  <li>Crema Clásica Vainilla</li>
+                  <li>Manjar Nuez</li>
+                  <li>Ganache de Chocolate</li>
+                  <li>Piña Crema</li>
+                  <li>Salsa de Frutillas / Frutos Rojos</li>
+                  <li>Crema Mokka</li>
+                  <li>Crema Pastelera</li>
+                  <li>Mermelada (Consultar sabores)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+      <MinicakeGallery></MinicakeGallery>
+      </section>
+      
+        
+
     );
 };
 
