@@ -1,83 +1,68 @@
 .product-list-container {
-    font-family: 'Cookie', sans-serif;
-  }
-  
-  .motion-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    width: auto;
-    box-sizing: content-box;
-  }
-  
-  .title {
-    color: #6A4844;
-    font-size: 2rem;
-    text-align: center;
-    width: auto;
-  }
-  
-  .flex-row {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    max-width: 1500px;
-    width: 100%;
-  }
-  
-  .flex-item {
-    text-align: left;
-    margin-top: 0;
-    flex: 1 1 250px;
-  }
-  
-  .sabores .subtitle,
-  .rellenos .subtitle {
-    color: #6A4844;
-    font-size: 1.8rem;
-    margin-bottom: 0;
-  }
-  
-  .list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-size: 1.2rem;
-  }
-  
-  .image-container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    flex: 1 1 400px;
-  }
-  
-  .image {
-    width: 100%;
-    border-radius: 20px;
-    padding-top: 0;
-  }
-  
-  /* Media Queries for Mobile */
-  @media (max-width: 768px) {
-    .flex-row {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .flex-item {
-      width: 100%;
-      max-width: none;
-    }
-  
-    .image-container {
-      max-width: 100%;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  width: auto;
+  box-sizing: content-box;
+  padding-bottom: 10rem;
+}
+
+.title {
+  color: #6A4844;
+  font-size: 2rem;
+  text-align: center;
+  width: auto;
+}
+
+.flex-row {
+  display: flex;
+  align-items: flex-start; /* Alinea los elementos verticalmente */
+  gap: 2rem;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.flex-item {
+  text-align: left;
+  margin-top: 0;
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinea el contenido verticalmente */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  flex: 1 1 400px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 20px;
+  padding-top: 0;
+}
+
+.sabores .subtitle,
+.rellenos .subtitle {
+  color: #6A4844;
+  font-size: 1.8rem;
+  margin: 0; /* Elimina cualquier margen */
+  padding: 0; /* Elimina cualquier padding */
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.sabores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinea el contenido verticalmente */
+}

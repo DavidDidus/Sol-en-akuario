@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import minicake from '../images/torta linda.jpg';
 import { motion } from "framer-motion";
 import '../styles/ProductListStyles.css';
 import MinicakeGallery from './MinicakeGallery.tsx';
+import MinicakeGalleryModal from './MinicakeGallery.tsx';
 
-const ProductList: React.FC = () => {
+const ProductList = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
     return (
         <section
             style={{
@@ -41,7 +53,9 @@ const ProductList: React.FC = () => {
                 <img 
                   src={minicake} 
                   alt="Minicake" 
+                  onClick={openModal}
                   className="image"
+                  style={{ cursor: 'pointer' }}
                 />
               </div>
   
@@ -62,8 +76,11 @@ const ProductList: React.FC = () => {
             </div>
           </div>
         </motion.div>
+        <MinicakeGalleryModal isOpen={isModalOpen} onRequestClose={closeModal} />
       </div>
-      <MinicakeGallery></MinicakeGallery>
+
+   
+      
       </section>
       
         

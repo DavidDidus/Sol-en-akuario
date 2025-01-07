@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posicionamiento de Divs</title>
+  <style>
+    /* General */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .container {
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .box {
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Para definir colores y tamaños */
+    .box1 { background-color: #3498db; width: 100px; height: 100px; }
+    .box2 { background-color: #2ecc71; width: 150px; height: 100px; }
+    .box3 { background-color: #e74c3c; width: 200px; height: 150px; }
+
+    /* Bloque (Uno debajo de otro) */
+    .block-container .box {
+      margin: 10px 0;
+    }
+
+    /* Inline-block (Uno al lado del otro) */
+    .inline-block-container .box {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    /* Flexbox */
+    .flex-container {
+      display: flex;
+      justify-content: space-around; /* Espacio entre elementos */
+      align-items: center; /* Alineación vertical */
+      flex-wrap: wrap; /* Permitir que se envuelvan si no hay espacio */
+    }
+
+    .flex-container .box {
+      margin: 10px;
+    }
+
+    /* Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+      gap: 10px; /* Espacio entre elementos */
+    }
+
+    .grid-container .box {
+      /* Tamaños definidos por el contenido del grid */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Título -->
+  <h2>1. Divs uno debajo de otro (Bloque)</h2>
+  <div class="container block-container">
+    <div class="box box1">Div 1</div>
+    <div class="box box2">Div 2</div>
+    <div class="box box3">Div 3</div>
+  </div>
+
+  <h2>2. Divs uno al lado del otro (Inline-block)</h2>
+  <div class="container inline-block-container">
+    <div class="box box1">Div 1</div>
+    <div class="box box2">Div 2</div>
+    <div class="box box3">Div 3</div>
+  </div>
+
+  <h2>3. Divs con Flexbox</h2>
+  <div class="container flex-container">
+    <div class="box box1">Div 1</div>
+    <div class="box box2">Div 2</div>
+    <div class="box box3">Div 3</div>
+  </div>
+
+  <h2>4. Divs con Grid</h2>
+  <div class="container grid-container">
+    <div class="box box1">Div 1</div>
+    <div class="box box2">Div 2</div>
+    <div class="box box3">Div 3</div>
+    <div class="box box1">Div 4</div>
+    <div class="box box2">Div 5</div>
+    <div class="box box3">Div 6</div>
+  </div>
+
+</body>
+</html>
