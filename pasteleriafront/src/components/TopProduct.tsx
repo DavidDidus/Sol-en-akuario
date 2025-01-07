@@ -6,7 +6,12 @@ import focachia from "../images/focachia.jpg";
 
 const TopProduct: React.FC = () => {
     return (
-        <section style={{ padding: "2rem 1rem", textAlign: "center" }}>
+        <section style={{ 
+            padding: "2rem 1rem", 
+            textAlign: "center" ,
+            
+            
+            }}>
         {/* Animación del título */}
             <motion.div
                 initial={{ opacity: 0, y: -50 }}

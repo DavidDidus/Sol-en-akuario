@@ -28,6 +28,7 @@ const styles = {
     color: '#6A4844',
     textAlign: 'center' as 'center',
     marginBottom: '20px',
+    fontFamily: 'Raleway',
   },
   imageSlider: {
     maxWidth: '300px',
@@ -43,6 +44,7 @@ const styles = {
     maxWidth: '150px',
     height: 'auto' as 'auto',
     borderRadius: '10px',
+    cursor: 'pointer' as 'pointer',
   },
   closeButton: {
     display: 'block',

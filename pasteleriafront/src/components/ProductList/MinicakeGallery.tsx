@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
-import torta1 from "../images/torta doja.jpg";
-import torta2 from "../images/otratortalinda.jpg";
-import torta3 from "../images/torta fubol.jpg";
-import torta4 from "../images/torta galleta.jpg";
-import torta5 from "../images/torta linda.jpg";
-import torta6 from "../images/tortalinda.jpg";
+import torta1 from "../../images/torta doja.jpg";
+import torta2 from "../../images/otratortalinda.jpg";
+import torta3 from "../../images/torta fubol.jpg";
+import torta4 from "../../images/torta galleta.jpg";
+import torta5 from "../../images/torta linda.jpg";
+import torta6 from "../../images/tortalinda.jpg";
 import Modal from "react-modal";
-import styles from '../styles/MinicakeGalleryModal.ts';
+import styles from '../../styles/MinicakeGalleryModal.ts';
 
 const images = [
     torta1,
@@ -49,7 +49,7 @@ const MinicakeGalleryModal = ({ isOpen, onRequestClose }) => {
             content: styles.modal,
             }}
         >
-        <h2 style={styles.modalTitle}>Galeria</h2>
+        <h2 style={styles.modalTitle}>Galeria de Minicakes</h2>
             <div style={styles.imageContainer}>
             {images.map((image, index) => (
             <div key={index} style={styles.imageItem}>

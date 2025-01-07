@@ -38,7 +38,7 @@ const images = [
       style={{
         background: "#f5d6eb",
         textAlign: "center",
-        fontFamily: "'Quicksand', sans-serif",
+        fontFamily: "Raleway",
         padding: "1rem 0",
       }}
     >
@@ -54,7 +54,8 @@ const images = [
             fontSize: "2rem",
             fontWeight: "bold",
             color: "#6A4844",
-            font: "Quicksand",
+            fontFamily: "Raleway",
+            
           }}
         >
         Sol en Akuario

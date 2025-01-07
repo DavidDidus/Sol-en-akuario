@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
+  
   width: auto;
   box-sizing: content-box;
-  padding-bottom: 10rem;
+  
+  
 }
 
 .title {
@@ -13,6 +14,7 @@
   font-size: 2rem;
   text-align: center;
   width: auto;
+  font-family: "Raleway"
 }
 
 .flex-row {
@@ -52,6 +54,7 @@
   font-size: 1.8rem;
   margin: 0; /* Elimina cualquier margen */
   padding: 0; /* Elimina cualquier padding */
+ 
 }
 
 .list {
@@ -59,6 +62,8 @@
   padding: 0;
   margin: 0;
   font-size: 1.2rem;
+  
+  
 }
 
 .sabores {

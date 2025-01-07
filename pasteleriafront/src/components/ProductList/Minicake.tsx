@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import minicake from '../images/torta linda.jpg';
+import minicake from '../../images/torta linda.jpg';
 import { motion } from "framer-motion";
-import '../styles/ProductListStyles.css';
-import MinicakeGallery from './MinicakeGallery.tsx';
+import '../../styles/MinicakeStyles.css';
 import MinicakeGalleryModal from './MinicakeGallery.tsx';
 
-const ProductList = () => {
+const Minicake = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -22,6 +21,7 @@ const ProductList = () => {
             style={{
             background: "#f5d6eb",
             color: "#333",
+            fontFamily: "Raleway",
             
             }}>
         <div className="product-list-container">
@@ -29,9 +29,8 @@ const ProductList = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="motion-container"
         >
-          <div className="content-container">
+          <div >
             <h2 className="title">Minicakes</h2>
   
             <div className="flex-row">
@@ -41,8 +40,8 @@ const ProductList = () => {
                 <ul className="list">
                   <li>Vainilla</li>
                   <li>Chocolate</li>
-                  <li>Canela tiramisu</li>
-                  <li>Limón - naranja</li>
+                  <li>Canela Tiramisu</li>
+                  <li>Limón - Naranja</li>
                   <li>Arándanos</li>
                   <li>Zanahoria</li>
                 </ul>
@@ -75,17 +74,14 @@ const ProductList = () => {
               </div>
             </div>
           </div>
+          <h2 className="title">¡Presiona la imagen para ver más minicakes!</h2>
+
         </motion.div>
         <MinicakeGalleryModal isOpen={isModalOpen} onRequestClose={closeModal} />
+
       </div>
-
-   
-      
       </section>
-      
-        
-
     );
 };
 
-export default ProductList;
+export default Minicake;
