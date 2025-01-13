@@ -14,6 +14,8 @@ const App: React.FC = () => {
                 <Route path="/" element={<HeroSection />} />
                 <Route path="/productos" element={<ProductList />} />
                 <Route path="/sobre-nosotros" element={<About />} />
+                <Route path="/productos/cookie" Component={ProductList} />
+                <Route path="/productos/focaccia" Component={ProductList} />
             </Routes>
         </div>
     );

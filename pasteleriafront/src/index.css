@@ -6,11 +6,11 @@ body {
 }
 
 header {
-  
-  background-color: #f9efce    ;
+  background-color: #f9efce;
   padding: 1rem;
   text-align: center;
-  
+  top: 0;
+  z-index: 1000;
 }
 
 h1 {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import minicake from '../../images/torta linda.jpg';
+import minicake from '../../images/Minicakes/torta linda.jpg';
 import { motion } from "framer-motion";
 import '../../styles/MinicakeStyles.css';
 import MinicakeGalleryModal from './MinicakeGallery.tsx';
@@ -40,40 +40,46 @@ const Minicake = () => {
                 <ul className="list">
                   <li>Vainilla</li>
                   <li>Chocolate</li>
-                  <li>Canela Tiramisu</li>
+                  <li>Canela Tiramisú</li>
                   <li>Limón - Naranja</li>
                   <li>Arándanos</li>
                   <li>Zanahoria</li>
                 </ul>
               </div>
-  
+            
               {/* Imagen y título */}
-              <div className="flex-item image-container">
-                <img 
+              <div className="flex-item ">
+                <motion.img 
                   src={minicake} 
                   alt="Minicake" 
                   onClick={openModal}
                   className="image"
                   style={{ cursor: 'pointer' }}
-                />
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  />
               </div>
-  
+    
               {/* Rellenos */}
               <div className="flex-item rellenos">
+                
                 <h3 className="subtitle">Rellenos</h3>
                 <ul className="list">
-                  <li>Crema Clásica Vainilla</li>
                   <li>Manjar Nuez</li>
-                  <li>Ganache de Chocolate</li>
-                  <li>Piña Crema</li>
+                  <li>Ganashe de Chocolate</li>
+                  <li>Piña, Duraznos o Frutilla</li>
                   <li>Salsa de Frutillas / Frutos Rojos</li>
                   <li>Crema Mokka</li>
-                  <li>Crema Pastelera</li>
-                  <li>Mermelada (Consultar sabores)</li>
                 </ul>
               </div>
             </div>
           </div>
+          <p className="text">$9.000 diseño o frase simple</p>
+          <p className="text">$11.000 diseño con dibujo</p>
+          
           <h2 className="title">¡Presiona la imagen para ver más minicakes!</h2>
 
         </motion.div>

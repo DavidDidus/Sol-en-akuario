@@ -1,28 +1,21 @@
-.product-list-container {
+.focaccia-list-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: auto;
   box-sizing: content-box;
+  padding-bottom: 10rem;
 }
 
-.text {
-  color: #6A4844;
-  font-size: 1.5rem;
-  text-align: center;
-  width: auto;
-  font-family: "Raleway"
-}
-
-.title {
+.focaccia-title {
   color: #6A4844;
   font-size: 2rem;
   text-align: center;
   width: auto;
-  font-family: "Raleway"
+  font-family: "Raleway";
 }
 
-.flex-row {
+.focaccia-flex-row {
   display: flex;
   align-items: flex-start; /* Alinea los elementos verticalmente */
   gap: 2rem;
@@ -30,7 +23,7 @@
   width: 100%;
 }
 
-.flex-item {
+.focaccia-flex-item {
   text-align: left;
   margin-top: 0;
   flex: 1 1 250px;
@@ -39,7 +32,7 @@
   justify-content: center; /* Alinea el contenido verticalmente */
 }
 
-.image-container {
+.focaccia-image-container {
   position: relative;
   width: 100%;
   max-width: 400px;
@@ -47,36 +40,62 @@
   flex: 1 1 400px;
 }
 
-.image {
+.focaccia-image {
   width: 100%;
-  max-width: 400px;
   border-radius: 20px;
+  padding-top: 0;
 }
 
-.sabores .subtitle,
-.rellenos .subtitle {
+.focaccia-subtitle {
   color: #6A4844;
   font-size: 1.8rem;
   margin: 0; /* Elimina cualquier margen */
   padding: 0; /* Elimina cualquier padding */
-  color: #6A4844;
-  font-family: "Raleway";
- 
 }
 
-.list {
+.focaccia-text {
+  color: #6A4844;
+  font-size: 1.5rem;
+  text-align: center;
+  width: auto;
+  font-family: "Raleway";
+}
+
+.focaccia-list {
   list-style-type: none;
-  padding: 0;
+  padding-bottom: 2rem;
   margin: 0;
-  font-size: 1.2rem;
-  color: #6A4844;
-  font-family: "Raleway";
-  
-  
+  font-size: 1.5rem;
 }
 
-.sabores {
+.focaccia-sabores {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Alinea el contenido verticalmente */
+}
+
+.focaccia-rellenos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinea el contenido verticalmente */
+}
+
+.focaccia-list .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6A4844;
+  text-align: left;
+  padding: 0;
+}
+.focaccia-list .text {
+  font-size: 1.3rem;
+  padding: 0;
+  color: #6A4844;
+  text-align: left;
+}
+
+.focaccia-price {
+  display: "flex";
+  justify-content: "space-around";
+  margin-top: "20px";
 }

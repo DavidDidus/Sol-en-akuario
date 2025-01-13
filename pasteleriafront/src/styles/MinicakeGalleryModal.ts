@@ -12,6 +12,7 @@ const styles = {
     overflow: 'auto' as 'auto',
     backgroundColor: '#f5d6eb',
     zIndex: 1000,
+    
   },
   overlay: {
     position: 'fixed' as 'fixed',
@@ -30,9 +31,17 @@ const styles = {
     marginBottom: '20px',
     fontFamily: 'Raleway',
   },
+  modalText: {
+    fontSize: '1rem',
+    color: '#6A4844',
+    textAlign: 'center' as 'center',
+    fontFamily: 'Raleway',
+    itemAlign: 'center' as 'center',
+  },
   imageSlider: {
     maxWidth: '300px',
     margin: '0 auto',
+    
   },
   imageSlide: {
     display: 'flex',
@@ -40,11 +49,12 @@ const styles = {
     alignItems: 'center' as 'center',
   },
   sliderImage: {
-    width: '100%',
+    width: 'auto' as 'auto',
     maxWidth: '150px',
     height: 'auto' as 'auto',
     borderRadius: '10px',
     cursor: 'pointer' as 'pointer',
+    itemAlign: 'center' as 'center',
   },
   closeButton: {
     display: 'block',
@@ -58,7 +68,9 @@ const styles = {
   },
   imageContainer: {
     display: 'flex',
-    justifyContent: 'left' as 'left',
+    AlignItems: 'center' as 'center',
+    justifyContent: 'center' as 'center',
+    
     gap: '2rem',
     flexWrap: 'wrap' as 'wrap',
   },

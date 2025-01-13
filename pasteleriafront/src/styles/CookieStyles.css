@@ -5,7 +5,6 @@
     padding: 0;
     width: auto;
     box-sizing: content-box;
-    padding-bottom: 10rem;
   }
   
   .cookie-title {
@@ -53,12 +52,23 @@
     margin: 0; /* Elimina cualquier margen */
     padding: 0; /* Elimina cualquier padding */
   }
+  .cookie-text {
+    color: #6A4844;
+    font-size: 1.5rem;
+    text-align: center;
+    width: auto;
+    font-family: "Raleway";
+    
+  }
   
   .cookie-list {
     list-style-type: none;
-    padding: 0;
+    padding-bottom: 2rem;
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    color: #6A4844;
+    font-family: "Raleway";
+
   }
   
   .cookie-sabores {
@@ -71,4 +81,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center; /* Alinea el contenido verticalmente */
+  }
+
+  .cookie-list .icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
   }

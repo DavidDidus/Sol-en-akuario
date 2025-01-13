@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import cupcakeImage from '../images/cupcake.jpg';
-import tortaDojaImage from '../images/torta doja.jpg';
-import tortaFubolImage from '../images/torta fubol.jpg';
-import tortaGalletaImage from '../images/torta galleta.jpg';
-import tortaLindaImage from '../images/torta linda.jpg';
+import "../styles/HomeStyles.css";
+import cupcakeImage from '../images/Cupcakes/cupcake.jpg';
+import tortaDojaImage from '../images/Minicakes/torta doja.jpg';
+import tortaFubolImage from '../images/Minicakes/torta fubol.jpg';
+import tortaGalletaImage from '../images/Minicakes/torta galleta.jpg';
+import tortaLindaImage from '../images/Minicakes/torta linda.jpg';
 import TopProduct from "./TopProduct.tsx";
+import heroImage from "../images/heroImagen.jpg";
 
 
 
@@ -34,36 +36,10 @@ const images = [
 ];
 
   return (
-    <section
-      style={{
-        background: "#f5d6eb",
-        textAlign: "center",
-        fontFamily: "Raleway",
-        padding: "1rem 0",
-      }}
-    >
-      {/* Animación del título */}
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        style={{ maxWidth: "900px", margin: "0 auto" }}
-      >
-        <h1
-          style={{
-            fontSize: "2rem",
-            fontWeight: "bold",
-            color: "#6A4844",
-            fontFamily: "Raleway",
-            
-          }}
-        >
-        Sol en Akuario
-        </h1> 
-        
-      </motion.div>
-
-      {/* Carrusel de imágenes */}
+    <section>
+      <div className="hero-container" style={{ backgroundImage: `url(${heroImage})` }}>
+       
+      {/* Carrusel de imágenes }
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -87,8 +63,10 @@ const images = [
           ))}
         </Slider>
       </motion.div>
+      {*/}
 
       {/* Botón con animación */}
+      <div style={{ padding: "40rem" }}>
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -108,7 +86,8 @@ const images = [
       >
         Explorar Productos
       </motion.button>
-
+      </div>
+      </div>
       <TopProduct />
     </section>
     

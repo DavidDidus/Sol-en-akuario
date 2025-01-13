@@ -1,31 +1,29 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Slider from "react-slick";
-import torta1 from "../../images/torta doja.jpg";
-import torta2 from "../../images/otratortalinda.jpg";
-import torta3 from "../../images/torta fubol.jpg";
-import torta4 from "../../images/torta galleta.jpg";
-import torta5 from "../../images/torta linda.jpg";
-import torta6 from "../../images/tortalinda.jpg";
+import torta1 from "../../images/Minicakes/Minicake Albahaca.jpg";
+import torta2 from "../../images/Minicakes/otratortalinda.jpg";
+import torta3 from "../../images/Minicakes/torta fubol.jpg";
+import torta4 from "../../images/Minicakes/torta galleta.jpg";
+import torta5 from "../../images/Minicakes/torta linda.jpg";
+import torta6 from "../../images/Minicakes/tortalinda.jpg";
 import Modal from "react-modal";
 import styles from '../../styles/MinicakeGalleryModal.ts';
 
-const images = [
-    torta1,
-    torta2,
-    torta3,
-    torta4,
-    torta5,
-    torta6,
+const product = [
+  { name: "Minicake Albahaca", image: torta1},
+  { name: "Torta fubol", image: torta3},
+  { name: "Torta galleta", image: torta4},
+  { name: "Torta linda", image: torta5},
+  { name: "Torta linda", image: torta6},
 ];
 
 const MinicakeGalleryModal = ({ isOpen, onRequestClose }) => {
 
     const [isImageModalOpen, setIsImageModalOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedImage, setSelectedImage] = useState<{ name: string, image: string } | null>(null);
       
-    const openImageModal = (image) => {
-        setSelectedImage(image);
+    const openImageModal = (product) => {
+        setSelectedImage(product);
         setIsImageModalOpen(true);
     };
       
@@ -35,12 +33,7 @@ const MinicakeGalleryModal = ({ isOpen, onRequestClose }) => {
     };
       
     return (
-        <motion.image
-                  initial={{ opacity: 0, y: -50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1 }}
-                  className="motion-container"
-                >
+        <div className="motion-container">
         <Modal
             isOpen={isOpen}
             onRequestClose={onRequestClose}
@@ -51,14 +44,18 @@ const MinicakeGalleryModal = ({ isOpen, onRequestClose }) => {
         >
         <h2 style={styles.modalTitle}>Galeria de Minicakes</h2>
             <div style={styles.imageContainer}>
-            {images.map((image, index) => (
+            {product.map((product, index) => (
             <div key={index} style={styles.imageItem}>
-                <img
-                src={image}
-                alt={`Minicake ${index + 1}`}
-                style={styles.sliderImage}
-                onClick={() => openImageModal(image)}
+                <motion.img
+                  initial={{ opacity: 0, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1,delay: index * 0.3  }}
+                  src={product.image}
+                  alt={`Minicake ${index + 1}`}
+                  style={styles.sliderImage}
+                  onClick={() => openImageModal(product)}
                 />
+                {/*<p style={styles.modalText} >{product.name}</p>]*/}
             </div>
             ))}
         </div>
@@ -79,16 +76,23 @@ const MinicakeGalleryModal = ({ isOpen, onRequestClose }) => {
         </button>
         <div style={styles.enlargedImageContainer}>
         {selectedImage && (
-          <img
-            src={selectedImage}
+          <>
+          <motion.img
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1}}
+            src={selectedImage.image}
             alt="Selected Minicake"
             style={styles.enlargedImage}
           />
+          </>
+          
         )}
+        
         </div>
       </Modal>
 
-      </motion.image>
+      </div>
     );
 };
 
