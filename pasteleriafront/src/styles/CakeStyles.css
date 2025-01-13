@@ -67,6 +67,7 @@
 }
 
 .cake-text {
+  color : #6A4844;
   
   font-size: 1.5rem;
   text-align: center;
@@ -78,7 +79,8 @@
   list-style-type: none;
   padding-bottom: 2rem;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  color : #6A4844;
 }
 
 .cake-sabores {
@@ -102,7 +104,7 @@
 }
 
 .cake-list .text {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 0;
   color: #6A4844;
   text-align: left;
@@ -112,4 +114,14 @@
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  color : #6A4844;
+  font-size: 1.5rem;
+}
+
+.cake-text {
+  color : #6A4844;
+  font-size: 1rem;
+  text-align: center;
+  width: auto;
+  font-family: "Raleway";
 }

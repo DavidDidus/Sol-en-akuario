@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f5d6eb;
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 1rem 0;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #6a4844;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .sidebar a:hover {
+    color: #c17e5f;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+  }

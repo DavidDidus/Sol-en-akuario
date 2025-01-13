@@ -44,33 +44,33 @@ const CakeMenu = () => {
       <div className="cake-flex-row">
         <div className="cake-flex-item2 cake-sabores">
           <h3 className="cake-subtitle">Selva Negra</h3>
-          <p>
+          <p className="cake-text">
             Bizcocho de chocolate, almíbar de ron, crema clásica y mermelada de cereza.
           </p>
-          <p><strong>$32.000 - $36.000</strong></p>
+          <p className="cake-text"><strong>$32.000 - $36.000</strong></p>
         </div>
         <div className="cake-flex-item2 cake-sabores">
           <h3 className="cake-subtitle">Dark</h3>
-          <p>
+          <p className="cake-text">
             Bizcocho de chocolate remojado en café, ganache de chocolate y crema mokka.
           </p>
-          <p><strong>$32.000 - $36.000</strong></p>
+          <p className="cake-text"> <strong>$32.000 - $36.000</strong></p>
         </div>
       </div>
       <div className="cake-flex-row">
         <div className="cake-flex-item2 cake-sabores">
           <h3 className="cake-subtitle">Tres Leches Vegan</h3>
-          <p>
+          <p className="cake-text">
             Bizcocho remojado en tres leches, manjar y crema de vainilla.
           </p>
-          <p><strong>$32.000 - $36.000</strong></p>
+          <p className="cake-text"><strong>$32.000 - $36.000</strong></p>
         </div>
         <div className="cake-flex-item2 cake-sabores">
           <h3 className="cake-subtitle">Vegan Tropical</h3>
-          <p>
+          <p className="cake-text" >
             Bizcocho de vainilla, almíbar de piña, crema, piña y frutillas frescas.
           </p>
-          <p><strong>$32.000 - $36.000</strong></p>
+          <p className="cake-text"><strong>$32.000 - $36.000</strong></p>
         </div>
       </div>
 
@@ -122,8 +122,8 @@ const CakeMenu = () => {
         </div>
         
       </div>
-      <p className="cake-text"><strong>20 cm 8-10 p: $32.000 </strong></p>
-      <p className="cake-text"><strong>26 cm 14-15 p: $36.000</strong></p>
+      <p className="cake-price"><strong>20 cm 8-10 p: $32.000 </strong></p>
+      <p className="cake-price"><strong>26 cm 14-15 p: $36.000</strong></p>
       
        
     </motion.div>
