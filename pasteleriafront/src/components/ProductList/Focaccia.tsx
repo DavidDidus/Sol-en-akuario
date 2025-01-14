@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import focacciaImage from "../../images/Focaccia/focachia.jpg";
 import "../../styles/FocacciaStyles.css";
+import FocacciaGalleryModal from "./FocacciaGallery.tsx";
 
 const Focaccia: React.FC = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    
+      const openModal = () => {
+        setIsModalOpen(true);
+      };
+    
+      const closeModal = () => {
+        setIsModalOpen(false);
+      };
+
     return (
         <section
             style={{
@@ -29,7 +41,7 @@ const Focaccia: React.FC = () => {
                     src={focacciaImage} 
                     alt="Focaccia" 
                     className="focaccia-image"
-                    //onClick={openModal} 
+                    onClick={openModal} 
                     style={{ cursor: 'pointer' }} 
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -81,6 +93,7 @@ const Focaccia: React.FC = () => {
            
             </motion.div>
         </div>
+        <FocacciaGalleryModal isOpen={isModalOpen} onRequestClose={closeModal} />
         </section>
 
     );
